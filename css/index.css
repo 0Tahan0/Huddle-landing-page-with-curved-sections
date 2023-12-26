@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  /* Default */
+  font-family: OpenSans-400;
+}
+:root {
+  /* Colors */
+  /* ### Primary */
+  --Pink: hsl(322, 100%, 66%);
+  --Light-Pink: hsl(321, 100%, 78%);
+  --Light-Red: hsl(0, 100%, 63%);
+  /* ### Neutral */
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Very-Pale-Blue: hsl(207, 100%, 98%);
+  /* ------------ */
+  --section-margin: 20rem;
+}
+/* - Weights: 400, 600, 700 */
+@font-face {
+  font-family: OpenSans-700;
+  src: url("./../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: OpenSans-600;
+  src: url("./../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: OpenSans-400;
+  src: url("./../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./../assets/fonts/Poppins/Poppins-Bold.ttf");
+  /* - Weights: 700 */
+}
+/* start Commbonents */
+.main-btn {
+  background-color: var(--Pink);
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: OpenSans-600;
+}
+.main-btn:active,
+.main-btn:hover {
+  background-color: var(--Light-Pink) !important;
+  color: #fff !important;
+}
+.sec-btn {
+  background-color: #fff;
+  border-color: var(--Pink);
+  color: var(--Pink);
+  font-size: 0.8rem;
+  font-family: OpenSans-600;
+}
+.sec-btn:active,
+.sec-btn:hover {
+  color: var(--Light-Pink) !important;
+  border-color: var(--Light-Pink) !important;
+}
+
+h1,
+h2 {
+  color: var(--Very-Dark-Cyan);
+  font-family: Poppins;
+}
+p {
+  color: var(--Very-Dark-Cyan);
+  font-family: OpenSans-600;
+}
+/* end Combonents */
+
+/* start landing */
+
+.landing-content h1 {
+  font-weight: 600;
+}
+.landing-content p {
+  max-width: 540px;
+
+  font-weight: 400;
+}
+.landing-content .comm h1 {
+  font-size: 4rem;
+  font-family: OpenSans-700;
+}
+/* end landing */
+
+/* start art-section */
+.art-section-3,
+.art-section {
+  position: relative;
+  background-color: var(--Very-Pale-Blue);
+  /* margin-top: var(--section-margin); */
+}
+/* start backgounds */
+@media (max-width: 991px) {
+  .art-section::after {
+    background-image: url(./../assets/images/bg-section-top-mobile-1.svg);
+  }
+  .art-section::before {
+    background-image: url(./../assets/images/bg-section-bottom-mobile-1.svg);
+  }
+  /* section 3 */
+  .art-section-3::after {
+    background-image: url(./../assets/images/bg-section-top-mobile-2.svg);
+  }
+  .art-section-3::before {
+    background-image: url(./../assets/images/bg-section-bottom-mobile-2.svg);
+  }
+  /* footer */
+  footer::after {
+    background-image: url(./../assets/images/bg-footer-top-mobile.svg);
+  }
+  /* size */
+
+  footer::after,
+  .art-section-3::after,
+  .art-section::after {
+    background-size: 100% 25% !important;
+    top: -12.4% !important;
+  }
+  .art-section-3::before,
+  .art-section::before {
+    background-size: contain !important;
+    bottom: -50% !important;
+  }
+}
+/* end backgounds */
+
+.art-section::after {
+  background-image: url(./../assets/images/bg-section-top-desktop-1.svg);
+}
+.art-section::before {
+  background-image: url(./../assets/images/bg-section-bottom-desktop-1.svg);
+}
+/* section 3 */
+.art-section-3::after {
+  background-image: url(./../assets/images/bg-section-top-desktop-2.svg);
+}
+.art-section-3::before {
+  background-image: url(./../assets/images/bg-section-bottom-desktop-2.svg);
+}
+footer::after {
+  background-image: url(./../assets/images/bg-footer-top-desktop.svg);
+}
+
+footer::after,
+.art-section-3::after,
+.art-section::after {
+  top: -50%;
+  right: 0%;
+}
+.art-section-3::before,
+.art-section::before {
+  bottom: -50%;
+  left: 0;
+}
+footer::after,
+.art-section-3::after,
+.art-section-3::before,
+.art-section::after,
+.art-section::before {
+  background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  background-size: 100% 100%;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+}
+/* end art-section */
+
+/* start footer */
+footer {
+  position: relative;
+  background-color: var(--Very-Dark-Cyan);
+}
+footer .logo path {
+  fill: #fff;
+}
+
+.subs .input-box .errorMessage {
+  color: var(--Light-Red) !important;
+  font-size: 12px;
+  visibility: hidden;
+
+}
+.subs .input-box.error .errorMessage{
+  visibility: visible;
+}
+.subs .input-box.error .email{
+  outline: 1px solid var(--Light-Red);
+}
+
+/* end footer */
+
+.mainMargin {
+  margin-top: var(--section-margin);
+}
