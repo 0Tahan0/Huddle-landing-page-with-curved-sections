@@ -206,7 +206,15 @@ footer .logo path {
 .subs .input-box.error .email{
   outline: 1px solid var(--Light-Red);
 }
-
+footer .social .facebook:hover{
+  color: #1877f2 !important;
+}
+footer .social .twitter:hover{
+  color: #1da1f2 !important;
+}
+footer .social .instagram:hover{
+  color: #e1306c !important;
+}
 /* end footer */
 
 .mainMargin {
